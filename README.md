@@ -28,3 +28,12 @@ phalcon --version
 ```sh
 phalcon create-project project
 ```
+
+輸入網址http://127.0.0.1/
+
+顯示
+
+Congratulations!
+You're now flying with Phalcon. Great things are about to happen!
+
+代表成功
