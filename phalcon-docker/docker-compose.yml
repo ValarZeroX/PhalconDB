@@ -8,7 +8,7 @@ services:
       - "80:80"
     volumes:
       - ../phalcon-docker/nginx.conf:/etc/nginx/conf.d/default.conf 
-      - ../backend:/var/www 
+      - ../backend/project:/var/www 
     depends_on:
       - backend
 
@@ -19,7 +19,7 @@ services:
     ports:
       - "9000:9000"
     volumes:
-      - "../backend:/var/www"
+      - "../backend/project:/var/www"
     environment:
       - DB_HOST=db
       - DB_PORT=3306

@@ -35,8 +35,8 @@ RUN curl -fsSL https://github.com/phalcon/cphalcon/archive/refs/tags/v5.8.0.tar.
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # 安裝 Phalcon DevTools
-RUN composer global require phalcon/devtools \
-    && ln -s ~/.composer/vendor/bin/phalcon /usr/local/bin/phalcon
+RUN composer global require phalcon/devtools:"^5.0@dev" --dev \
+    && ln -s /root/.composer/vendor/bin/phalcon /usr/local/bin/phalcon
 
 # 清理安裝過程中的緩存
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
